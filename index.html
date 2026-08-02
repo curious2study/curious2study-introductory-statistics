@@ -19,7 +19,6 @@
             line-height: 1.6;
         }
 
-        /* Header */
         header {
             background-color: #f8fafc;
             padding: 20px 0;
@@ -46,6 +45,12 @@
             height: 50px;
         }
 
+        .header-logo-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
         .site-title {
             font-size: 24px;
             font-weight: 700;
@@ -64,73 +69,239 @@
             color: #60a5fa;
         }
 
-        /* Under Construction Section */
-        .construction {
-            padding: 100px 20px;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 60px 20px;
             text-align: center;
-            background: linear-gradient(135deg, #f8fafc 0%, #eff6ff 100%);
-            min-height: 70vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
         }
 
-        .construction-content {
-            max-width: 600px;
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
         }
 
-        .construction-icon {
-            font-size: 80px;
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .resources {
+            background-color: #f8fafc;
+            padding: 40px 20px;
+            margin: 40px auto;
+            border-radius: 8px;
+            max-width: 1200px;
+        }
+
+        .resources h2 {
+            color: #1e3a8a;
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+
+        .resource-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
             margin-bottom: 30px;
         }
 
-        .construction h1 {
-            font-size: 42px;
+        .resource-link {
+            background: white;
+            padding: 20px;
+            border-radius: 6px;
+            border-left: 4px solid #3b82f6;
+            transition: transform 0.2s ease;
+        }
+
+        .resource-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .resource-link h3 {
             color: #1e3a8a;
-            margin-bottom: 20px;
-            font-weight: 700;
+            font-size: 16px;
+            margin-bottom: 10px;
         }
 
-        .construction p {
-            font-size: 18px;
-            color: #555;
+        .resource-link p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 12px;
+        }
+
+        .resource-link a {
+            display: inline-block;
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .resource-link a:hover {
+            color: #1e3a8a;
+        }
+
+        .chapters {
+            padding: 40px 20px;
+        }
+
+        .chapters h2 {
+            color: #1e3a8a;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        .chapter {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            overflow: hidden;
+        }
+
+        .chapter-header {
+            background-color: #f0f9ff;
+            padding: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+
+        .chapter-header:hover {
+            background-color: #e0f2fe;
+        }
+
+        .chapter-header h3 {
+            color: #1e3a8a;
+            font-size: 20px;
+            margin: 0;
+        }
+
+        .chapter-toggle {
+            color: #1e3a8a;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .chapter-content {
+            padding: 20px;
+            display: none;
+        }
+
+        .chapter-content.active {
+            display: block;
+        }
+
+        .section {
             margin-bottom: 15px;
-            line-height: 1.8;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e2e8f0;
         }
 
-        .coming-soon {
+        .section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .section-number {
+            font-weight: 600;
+            color: #1e3a8a;
+            font-size: 14px;
+        }
+
+        .section-title {
+            color: #333;
+            font-size: 16px;
+            margin: 5px 0;
+            font-weight: 500;
+        }
+
+        .section-pages {
+            font-size: 13px;
+            color: #999;
+            margin-bottom: 8px;
+        }
+
+        .section-link {
+            display: inline-block;
+            padding: 6px 14px;
             background-color: #3b82f6;
             color: white;
-            padding: 15px 30px;
-            border-radius: 5px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 500;
+            transition: background-color 0.2s ease;
+        }
+
+        .section-link:hover {
+            background-color: #1e3a8a;
+        }
+
+        .no-video {
             display: inline-block;
-            margin-top: 30px;
-            font-weight: 600;
+            padding: 6px 14px;
+            background-color: #e2e8f0;
+            color: #999;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: not-allowed;
         }
 
-        .course-preview {
-            margin-top: 60px;
-            background: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        .section-thumbnail {
+            display: inline-block;
+            margin-right: 12px;
+            vertical-align: top;
+            margin-bottom: 10px;
         }
 
-        .course-preview h2 {
-            font-size: 28px;
-            color: #1e3a8a;
+        .section-thumbnail img {
+            width: 140px;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease;
+        }
+
+        .section-thumbnail img:hover {
+            transform: scale(1.05);
+        }
+
+        .section-thumbnail a {
+            display: block;
+            text-decoration: none;
+        }
+
+        .section-info {
+            display: inline-block;
+            vertical-align: top;
+            flex: 1;
+        }
+
+        .combined-note {
+            background-color: #fef3c7;
+            padding: 12px;
+            border-left: 4px solid #f59e0b;
             margin-bottom: 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #92400e;
         }
 
-        .preview-text {
-            font-size: 16px;
-            color: #666;
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-
-        /* Footer */
         footer {
             background-color: #1e3a8a;
             color: white;
@@ -162,54 +333,1297 @@
             text-decoration: underline;
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
-            .construction h1 {
-                font-size: 32px;
+            .hero h1 {
+                font-size: 28px;
             }
 
-            .construction p {
-                font-size: 16px;
+            .chapter-header {
+                flex-direction: column;
+                align-items: flex-start;
             }
 
-            .construction-icon {
-                font-size: 60px;
+            .chapter-toggle {
+                margin-top: 10px;
             }
 
-            .course-preview {
-                padding: 20px;
+            .resource-links {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="header-content">
             <div class="logo-section">
-                <a href="https://curious2study.com" class="site-title">Curious2Study</a>
+                <img src="https://curious2study.com/curious2study_small.png" alt="Curious2Study Logo">
+                <div class="header-logo-text">
+                    <a href="https://curious2study.com" class="site-title">Curious2Study</a>
+                </div>
             </div>
             <a href="https://curious2study.com" class="back-link">← Back to Home</a>
         </div>
     </header>
 
-    <!-- Under Construction Section -->
-    <section class="construction">
-        <div class="construction-content">
-            <div class="construction-icon">🏗️</div>
-            <h1>Introductory Statistics</h1>
-            <p>We're building something amazing. This statistics course will launch soon with video lectures and study guides.</p>
-            <div class="coming-soon">Coming Soon</div>
+    <section class="hero">
+        <div class="container">
+            <h1>Introductory Statistics 2e</h1>
+            <p>From sampling and data to regression and ANOVA. Build a solid foundation in statistical thinking.</p>
+        </div>
+    </section>
 
-            <!-- Course Preview -->
-            <div class="course-preview">
-                <h2>What to Expect</h2>
-                <p class="preview-text">Learn to understand data, make informed decisions based on evidence, and think critically about statistical information. Build essential data literacy skills.</p>
+    <section class="container resources">
+        <h2>Course Resources</h2>
+        <div class="resource-links">
+            <div class="resource-link">
+                <h3>OpenStax Textbook</h3>
+                <p>Free, peer-reviewed textbook from Rice University.</p>
+                <a href="https://openstax.org/details/books/introductory-statistics-2e" target="_blank">Visit OpenStax →</a>
+            </div>
+
+            <div class="resource-link">
+                <h3>Archived Textbook PDF</h3>
+                <p>Complete PDF used for generating these videos.</p>
+                <a href="https://raw.githubusercontent.com/curious2study/curious2study-introductory-statistics/main/Introductory_Statistics_2e_-_WEB.pdf" target="_blank">Download PDF →</a>
+            </div>
+
+            <div class="resource-link">
+                <h3>YouTube Playlist</h3>
+                <p>All video lectures in one convenient playlist.</p>
+                <a href="https://www.youtube.com/playlist?list=PLV0ByVX6hDJU" target="_blank">View Playlist →</a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <section class="container chapters">
+        <h2>Chapter Lectures</h2>
+
+        <div class="chapter">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+                <h3>Chapter 1: Sampling and Data</h3>
+                <span class="chapter-toggle">+</span>
+            </div>
+            <div class="chapter-content">
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/GAAKEwPbFSI" target="_blank">
+                            <img src="https://img.youtube.com/vi/GAAKEwPbFSI/maxresdefault.jpg" alt="Definitions of Statistics, Probability, and Key Terms">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">1.1</div>
+                        <div class="section-title">Definitions of Statistics, Probability, and Key Terms</div>
+                        <div class="section-pages">Pages 5-9</div>
+                        <a href="https://youtu.be/GAAKEwPbFSI" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/nkUw8ZO_0W4" target="_blank">
+                            <img src="https://img.youtube.com/vi/nkUw8ZO_0W4/maxresdefault.jpg" alt="Data, Sampling, and Variation in Data and Sampling">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">1.2</div>
+                        <div class="section-title">Data, Sampling, and Variation in Data and Sampling</div>
+                        <div class="section-pages">Pages 10-25</div>
+                        <a href="https://youtu.be/nkUw8ZO_0W4" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/3478CPIRTko" target="_blank">
+                            <img src="https://img.youtube.com/vi/3478CPIRTko/maxresdefault.jpg" alt="Frequency, Frequency Tables, and Levels of Measurement">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">1.3</div>
+                        <div class="section-title">Frequency, Frequency Tables, and Levels of Measurement</div>
+                        <div class="section-pages">Pages 26-33</div>
+                        <a href="https://youtu.be/3478CPIRTko" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/1iwz3_Ou0ug" target="_blank">
+                            <img src="https://img.youtube.com/vi/1iwz3_Ou0ug/maxresdefault.jpg" alt="Experimental Design and Ethics">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">1.4</div>
+                        <div class="section-title">Experimental Design and Ethics</div>
+                        <div class="section-pages">Pages 34-37</div>
+                        <a href="https://youtu.be/1iwz3_Ou0ug" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/kq8zhm_1pkM" target="_blank">
+                            <img src="https://img.youtube.com/vi/kq8zhm_1pkM/maxresdefault.jpg" alt="Data Collection Experiment">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">1.5</div>
+                        <div class="section-title">Data Collection Experiment</div>
+                        <div class="section-pages">Pages 38-39</div>
+                        <a href="https://youtu.be/kq8zhm_1pkM" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/QRcVrBm4UJ4" target="_blank">
+                            <img src="https://img.youtube.com/vi/QRcVrBm4UJ4/maxresdefault.jpg" alt="Sampling Experiment">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">1.6</div>
+                        <div class="section-title">Sampling Experiment</div>
+                        <div class="section-pages">Pages 40-42</div>
+                        <a href="https://youtu.be/QRcVrBm4UJ4" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chapter">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+                <h3>Chapter 2: Descriptive Statistics</h3>
+                <span class="chapter-toggle">+</span>
+            </div>
+            <div class="chapter-content">
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/8uWAzwhmjX4" target="_blank">
+                            <img src="https://img.youtube.com/vi/8uWAzwhmjX4/maxresdefault.jpg" alt="Stem-and-Leaf Graphs (Stemplots), Line Graphs, and Bar Graphs">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">2.1</div>
+                        <div class="section-title">Stem-and-Leaf Graphs (Stemplots), Line Graphs, and Bar Graphs</div>
+                        <div class="section-pages">Pages 66-74</div>
+                        <a href="https://youtu.be/8uWAzwhmjX4" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/xM9UmjZt93U" target="_blank">
+                            <img src="https://img.youtube.com/vi/xM9UmjZt93U/maxresdefault.jpg" alt="Histograms, Frequency Polygons, and Time Series Graphs">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">2.2</div>
+                        <div class="section-title">Histograms, Frequency Polygons, and Time Series Graphs</div>
+                        <div class="section-pages">Pages 75-85</div>
+                        <a href="https://youtu.be/xM9UmjZt93U" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/dAZIb7f-DK8" target="_blank">
+                            <img src="https://img.youtube.com/vi/dAZIb7f-DK8/maxresdefault.jpg" alt="Measures of the Location of the Data">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">2.3</div>
+                        <div class="section-title">Measures of the Location of the Data</div>
+                        <div class="section-pages">Pages 86-93</div>
+                        <a href="https://youtu.be/dAZIb7f-DK8" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/2ABGb2OliNI" target="_blank">
+                            <img src="https://img.youtube.com/vi/2ABGb2OliNI/maxresdefault.jpg" alt="Box Plots">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">2.4</div>
+                        <div class="section-title">Box Plots</div>
+                        <div class="section-pages">Pages 94-97</div>
+                        <a href="https://youtu.be/2ABGb2OliNI" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/xQY1Dr4MOCc" target="_blank">
+                            <img src="https://img.youtube.com/vi/xQY1Dr4MOCc/maxresdefault.jpg" alt="Measures of the Center of the Data">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">2.5</div>
+                        <div class="section-title">Measures of the Center of the Data</div>
+                        <div class="section-pages">Pages 98-103</div>
+                        <a href="https://youtu.be/xQY1Dr4MOCc" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/fLDHu3Ye_JY" target="_blank">
+                            <img src="https://img.youtube.com/vi/fLDHu3Ye_JY/maxresdefault.jpg" alt="Skewness and the Mean, Median, and Mode">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">2.6</div>
+                        <div class="section-title">Skewness and the Mean, Median, and Mode</div>
+                        <div class="section-pages">Pages 104-106</div>
+                        <a href="https://youtu.be/fLDHu3Ye_JY" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/P8138vEjTI8" target="_blank">
+                            <img src="https://img.youtube.com/vi/P8138vEjTI8/maxresdefault.jpg" alt="Measures of the Spread of the Data">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">2.7</div>
+                        <div class="section-title">Measures of the Spread of the Data</div>
+                        <div class="section-pages">Pages 107-117</div>
+                        <a href="https://youtu.be/P8138vEjTI8" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/WC1RQSbJ6yE" target="_blank">
+                            <img src="https://img.youtube.com/vi/WC1RQSbJ6yE/maxresdefault.jpg" alt="Descriptive Statistics">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">2.8</div>
+                        <div class="section-title">Descriptive Statistics</div>
+                        <div class="section-pages">Pages 118-119</div>
+                        <a href="https://youtu.be/WC1RQSbJ6yE" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chapter">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+                <h3>Chapter 3: Probability Topics</h3>
+                <span class="chapter-toggle">+</span>
+            </div>
+            <div class="chapter-content">
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/K74wLHOOfiM" target="_blank">
+                            <img src="https://img.youtube.com/vi/K74wLHOOfiM/maxresdefault.jpg" alt="Terminology">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">3.1</div>
+                        <div class="section-title">Terminology</div>
+                        <div class="section-pages">Pages 168-171</div>
+                        <a href="https://youtu.be/K74wLHOOfiM" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/SY9x_t6EON4" target="_blank">
+                            <img src="https://img.youtube.com/vi/SY9x_t6EON4/maxresdefault.jpg" alt="Independent and Mutually Exclusive Events">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">3.2</div>
+                        <div class="section-title">Independent and Mutually Exclusive Events</div>
+                        <div class="section-pages">Pages 172-178</div>
+                        <a href="https://youtu.be/SY9x_t6EON4" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/irF4UubJ9U8" target="_blank">
+                            <img src="https://img.youtube.com/vi/irF4UubJ9U8/maxresdefault.jpg" alt="Two Basic Rules of Probability">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">3.3</div>
+                        <div class="section-title">Two Basic Rules of Probability</div>
+                        <div class="section-pages">Pages 179-182</div>
+                        <a href="https://youtu.be/irF4UubJ9U8" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/Ut68pilIe08" target="_blank">
+                            <img src="https://img.youtube.com/vi/Ut68pilIe08/maxresdefault.jpg" alt="Contingency Tables">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">3.4</div>
+                        <div class="section-title">Contingency Tables</div>
+                        <div class="section-pages">Pages 183-188</div>
+                        <a href="https://youtu.be/Ut68pilIe08" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/eOd-p_Sih3w" target="_blank">
+                            <img src="https://img.youtube.com/vi/eOd-p_Sih3w/maxresdefault.jpg" alt="Tree and Venn Diagrams">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">3.5</div>
+                        <div class="section-title">Tree and Venn Diagrams</div>
+                        <div class="section-pages">Pages 189-195</div>
+                        <a href="https://youtu.be/eOd-p_Sih3w" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/qlshN5EGKGw" target="_blank">
+                            <img src="https://img.youtube.com/vi/qlshN5EGKGw/maxresdefault.jpg" alt="Probability Topics">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">3.6</div>
+                        <div class="section-title">Probability Topics</div>
+                        <div class="section-pages">Pages 196-199</div>
+                        <a href="https://youtu.be/qlshN5EGKGw" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chapter">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+                <h3>Chapter 4: Discrete Random Variables</h3>
+                <span class="chapter-toggle">+</span>
+            </div>
+            <div class="chapter-content">
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/RkERq5qhsjE" target="_blank">
+                            <img src="https://img.youtube.com/vi/RkERq5qhsjE/maxresdefault.jpg" alt="Probability Distribution Function (PDF) for a Discrete Random Variable">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">4.1</div>
+                        <div class="section-title">Probability Distribution Function (PDF) for a Discrete Random Variable</div>
+                        <div class="section-pages">Pages 228-229</div>
+                        <a href="https://youtu.be/RkERq5qhsjE" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/0VYPHDd3oBs" target="_blank">
+                            <img src="https://img.youtube.com/vi/0VYPHDd3oBs/maxresdefault.jpg" alt="Mean or Expected Value and Standard Deviation">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">4.2</div>
+                        <div class="section-title">Mean or Expected Value and Standard Deviation</div>
+                        <div class="section-pages">Pages 230-236</div>
+                        <a href="https://youtu.be/0VYPHDd3oBs" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/lRjf7JE3Tm4" target="_blank">
+                            <img src="https://img.youtube.com/vi/lRjf7JE3Tm4/maxresdefault.jpg" alt="Binomial Distribution">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">4.3</div>
+                        <div class="section-title">Binomial Distribution</div>
+                        <div class="section-pages">Pages 237-241</div>
+                        <a href="https://youtu.be/lRjf7JE3Tm4" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/vdsIENgmG4o" target="_blank">
+                            <img src="https://img.youtube.com/vi/vdsIENgmG4o/maxresdefault.jpg" alt="Geometric Distribution">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">4.4</div>
+                        <div class="section-title">Geometric Distribution</div>
+                        <div class="section-pages">Pages 242-247</div>
+                        <a href="https://youtu.be/vdsIENgmG4o" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/JUCkKxM3jSI" target="_blank">
+                            <img src="https://img.youtube.com/vi/JUCkKxM3jSI/maxresdefault.jpg" alt="Hypergeometric Distribution">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">4.5</div>
+                        <div class="section-title">Hypergeometric Distribution</div>
+                        <div class="section-pages">Pages 248-249</div>
+                        <a href="https://youtu.be/JUCkKxM3jSI" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/8_kyMvygFpA" target="_blank">
+                            <img src="https://img.youtube.com/vi/8_kyMvygFpA/maxresdefault.jpg" alt="Poisson Distribution">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">4.6</div>
+                        <div class="section-title">Poisson Distribution</div>
+                        <div class="section-pages">Pages 250-254</div>
+                        <a href="https://youtu.be/8_kyMvygFpA" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/odKXGk-Dx5w" target="_blank">
+                            <img src="https://img.youtube.com/vi/odKXGk-Dx5w/maxresdefault.jpg" alt="Discrete Distribution (Playing Card Experiment)">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">4.7</div>
+                        <div class="section-title">Discrete Distribution (Playing Card Experiment)</div>
+                        <div class="section-pages">Pages 255-257</div>
+                        <a href="https://youtu.be/odKXGk-Dx5w" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/y__gqb2TbNw" target="_blank">
+                            <img src="https://img.youtube.com/vi/y__gqb2TbNw/maxresdefault.jpg" alt="Discrete Distribution (Dice Experiment Using Three Regular Dice)">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">4.8</div>
+                        <div class="section-title">Discrete Distribution (Dice Experiment Using Three Regular Dice)</div>
+                        <div class="section-pages">Pages 258-261</div>
+                        <a href="https://youtu.be/y__gqb2TbNw" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chapter">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+                <h3>Chapter 5: Continuous Random Variables</h3>
+                <span class="chapter-toggle">+</span>
+            </div>
+            <div class="chapter-content">
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/SHR2jricXf0" target="_blank">
+                            <img src="https://img.youtube.com/vi/SHR2jricXf0/maxresdefault.jpg" alt="Continuous Probability Functions">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">5.1</div>
+                        <div class="section-title">Continuous Probability Functions</div>
+                        <div class="section-pages">Pages 294-296</div>
+                        <a href="https://youtu.be/SHR2jricXf0" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/jSIQ6MI25Ho" target="_blank">
+                            <img src="https://img.youtube.com/vi/jSIQ6MI25Ho/maxresdefault.jpg" alt="The Uniform Distribution">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">5.2</div>
+                        <div class="section-title">The Uniform Distribution</div>
+                        <div class="section-pages">Pages 297-303</div>
+                        <a href="https://youtu.be/jSIQ6MI25Ho" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/CNZ_a-tgnmk" target="_blank">
+                            <img src="https://img.youtube.com/vi/CNZ_a-tgnmk/maxresdefault.jpg" alt="The Exponential Distribution">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">5.3</div>
+                        <div class="section-title">The Exponential Distribution</div>
+                        <div class="section-pages">Pages 304-314</div>
+                        <a href="https://youtu.be/CNZ_a-tgnmk" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/Aofcx8ucvjk" target="_blank">
+                            <img src="https://img.youtube.com/vi/Aofcx8ucvjk/maxresdefault.jpg" alt="Continuous Distribution">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">5.4</div>
+                        <div class="section-title">Continuous Distribution</div>
+                        <div class="section-pages">Pages 315-316</div>
+                        <a href="https://youtu.be/Aofcx8ucvjk" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chapter">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+                <h3>Chapter 6: The Normal Distribution</h3>
+                <span class="chapter-toggle">+</span>
+            </div>
+            <div class="chapter-content">
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/bWwJjxqMe6s" target="_blank">
+                            <img src="https://img.youtube.com/vi/bWwJjxqMe6s/maxresdefault.jpg" alt="The Standard Normal Distribution">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">6.1</div>
+                        <div class="section-title">The Standard Normal Distribution</div>
+                        <div class="section-pages">Pages 338-341</div>
+                        <a href="https://youtu.be/bWwJjxqMe6s" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/xnFdxrBwooc" target="_blank">
+                            <img src="https://img.youtube.com/vi/xnFdxrBwooc/maxresdefault.jpg" alt="Using the Normal Distribution">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">6.2</div>
+                        <div class="section-title">Using the Normal Distribution</div>
+                        <div class="section-pages">Pages 342-348</div>
+                        <a href="https://youtu.be/xnFdxrBwooc" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/LT6bv-8LNbU" target="_blank">
+                            <img src="https://img.youtube.com/vi/LT6bv-8LNbU/maxresdefault.jpg" alt="Normal Distribution (Lap Times)">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">6.3</div>
+                        <div class="section-title">Normal Distribution (Lap Times)</div>
+                        <div class="section-pages">Pages 349-349</div>
+                        <a href="https://youtu.be/LT6bv-8LNbU" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/AGKzo_TF6Qo" target="_blank">
+                            <img src="https://img.youtube.com/vi/AGKzo_TF6Qo/maxresdefault.jpg" alt="Normal Distribution (Pinkie Length)">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">6.4</div>
+                        <div class="section-title">Normal Distribution (Pinkie Length)</div>
+                        <div class="section-pages">Pages 350-352</div>
+                        <a href="https://youtu.be/AGKzo_TF6Qo" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chapter">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+                <h3>Chapter 7: The Central Limit Theorem</h3>
+                <span class="chapter-toggle">+</span>
+            </div>
+            <div class="chapter-content">
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/-CSaqH856as" target="_blank">
+                            <img src="https://img.youtube.com/vi/-CSaqH856as/maxresdefault.jpg" alt="The Central Limit Theorem for Sample Means (Averages)">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">7.1</div>
+                        <div class="section-title">The Central Limit Theorem for Sample Means (Averages)</div>
+                        <div class="section-pages">Pages 368-371</div>
+                        <a href="https://youtu.be/-CSaqH856as" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/WlZS_bd7BE8" target="_blank">
+                            <img src="https://img.youtube.com/vi/WlZS_bd7BE8/maxresdefault.jpg" alt="The Central Limit Theorem for Sums">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">7.2</div>
+                        <div class="section-title">The Central Limit Theorem for Sums</div>
+                        <div class="section-pages">Pages 372-374</div>
+                        <a href="https://youtu.be/WlZS_bd7BE8" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/Z3ZrDBezptg" target="_blank">
+                            <img src="https://img.youtube.com/vi/Z3ZrDBezptg/maxresdefault.jpg" alt="Using the Central Limit Theorem">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">7.3</div>
+                        <div class="section-title">Using the Central Limit Theorem</div>
+                        <div class="section-pages">Pages 375-382</div>
+                        <a href="https://youtu.be/Z3ZrDBezptg" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/v6OOb_1x_gg" target="_blank">
+                            <img src="https://img.youtube.com/vi/v6OOb_1x_gg/maxresdefault.jpg" alt="Central Limit Theorem (Pocket Change)">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">7.4</div>
+                        <div class="section-title">Central Limit Theorem (Pocket Change)</div>
+                        <div class="section-pages">Pages 383-385</div>
+                        <a href="https://youtu.be/v6OOb_1x_gg" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/k0BWHNqklMw" target="_blank">
+                            <img src="https://img.youtube.com/vi/k0BWHNqklMw/maxresdefault.jpg" alt="Central Limit Theorem (Cookie Recipes)">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">7.5</div>
+                        <div class="section-title">Central Limit Theorem (Cookie Recipes)</div>
+                        <div class="section-pages">Pages 386-389</div>
+                        <a href="https://youtu.be/k0BWHNqklMw" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chapter">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+                <h3>Chapter 8: Confidence Intervals</h3>
+                <span class="chapter-toggle">+</span>
+            </div>
+            <div class="chapter-content">
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/cpMVbjsQd9M" target="_blank">
+                            <img src="https://img.youtube.com/vi/cpMVbjsQd9M/maxresdefault.jpg" alt="A Single Population Mean using the Normal Distribution">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">8.1</div>
+                        <div class="section-title">A Single Population Mean using the Normal Distribution</div>
+                        <div class="section-pages">Pages 409-417</div>
+                        <a href="https://youtu.be/cpMVbjsQd9M" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/rbFJFqv1uNc" target="_blank">
+                            <img src="https://img.youtube.com/vi/rbFJFqv1uNc/maxresdefault.jpg" alt="A Single Population Mean using the Student t Distribution">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">8.2</div>
+                        <div class="section-title">A Single Population Mean using the Student t Distribution</div>
+                        <div class="section-pages">Pages 418-421</div>
+                        <a href="https://youtu.be/rbFJFqv1uNc" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/mznpVMKPym4" target="_blank">
+                            <img src="https://img.youtube.com/vi/mznpVMKPym4/maxresdefault.jpg" alt="A Population Proportion">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">8.3</div>
+                        <div class="section-title">A Population Proportion</div>
+                        <div class="section-pages">Pages 422-428</div>
+                        <a href="https://youtu.be/mznpVMKPym4" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/ieVH14LlmmU" target="_blank">
+                            <img src="https://img.youtube.com/vi/ieVH14LlmmU/maxresdefault.jpg" alt="Confidence Interval (Home Costs)">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">8.4</div>
+                        <div class="section-title">Confidence Interval (Home Costs)</div>
+                        <div class="section-pages">Pages 429-430</div>
+                        <a href="https://youtu.be/ieVH14LlmmU" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/IDMPmCH6HM0" target="_blank">
+                            <img src="https://img.youtube.com/vi/IDMPmCH6HM0/maxresdefault.jpg" alt="Confidence Interval (Place of Birth)">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">8.5</div>
+                        <div class="section-title">Confidence Interval (Place of Birth)</div>
+                        <div class="section-pages">Pages 431-431</div>
+                        <a href="https://youtu.be/IDMPmCH6HM0" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/FC79HUEvseM" target="_blank">
+                            <img src="https://img.youtube.com/vi/FC79HUEvseM/maxresdefault.jpg" alt="Confidence Interval (Women&#x27;s Heights)">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">8.6</div>
+                        <div class="section-title">Confidence Interval (Women&#x27;s Heights)</div>
+                        <div class="section-pages">Pages 432-433</div>
+                        <a href="https://youtu.be/FC79HUEvseM" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chapter">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+                <h3>Chapter 9: Hypothesis Testing with One Sample</h3>
+                <span class="chapter-toggle">+</span>
+            </div>
+            <div class="chapter-content">
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/WFYKnv7ca7c" target="_blank">
+                            <img src="https://img.youtube.com/vi/WFYKnv7ca7c/maxresdefault.jpg" alt="Null and Alternative Hypotheses">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">9.1</div>
+                        <div class="section-title">Null and Alternative Hypotheses</div>
+                        <div class="section-pages">Pages 464-465</div>
+                        <a href="https://youtu.be/WFYKnv7ca7c" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/LDHpkHgIxg4" target="_blank">
+                            <img src="https://img.youtube.com/vi/LDHpkHgIxg4/maxresdefault.jpg" alt="Outcomes and the Type I and Type II Errors">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">9.2</div>
+                        <div class="section-title">Outcomes and the Type I and Type II Errors</div>
+                        <div class="section-pages">Pages 466-467</div>
+                        <a href="https://youtu.be/LDHpkHgIxg4" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/nf-8fvRJXN0" target="_blank">
+                            <img src="https://img.youtube.com/vi/nf-8fvRJXN0/maxresdefault.jpg" alt="Probability Distribution Needed for Hypothesis Testing">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">9.3</div>
+                        <div class="section-title">Probability Distribution Needed for Hypothesis Testing</div>
+                        <div class="section-pages">Pages 468-468</div>
+                        <a href="https://youtu.be/nf-8fvRJXN0" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/Tz5P3GclcHY" target="_blank">
+                            <img src="https://img.youtube.com/vi/Tz5P3GclcHY/maxresdefault.jpg" alt="Rare Events, the Sample, Decision and Conclusion">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">9.4</div>
+                        <div class="section-title">Rare Events, the Sample, Decision and Conclusion</div>
+                        <div class="section-pages">Pages 469-470</div>
+                        <a href="https://youtu.be/Tz5P3GclcHY" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/DRLZnd3ZaLA" target="_blank">
+                            <img src="https://img.youtube.com/vi/DRLZnd3ZaLA/maxresdefault.jpg" alt="Additional Information and Full Hypothesis Test Examples">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">9.5</div>
+                        <div class="section-title">Additional Information and Full Hypothesis Test Examples</div>
+                        <div class="section-pages">Pages 471-484</div>
+                        <a href="https://youtu.be/DRLZnd3ZaLA" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/KWl10iv5twE" target="_blank">
+                            <img src="https://img.youtube.com/vi/KWl10iv5twE/maxresdefault.jpg" alt="Hypothesis Testing of a Single Mean and Single Proportion">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">9.6</div>
+                        <div class="section-title">Hypothesis Testing of a Single Mean and Single Proportion</div>
+                        <div class="section-pages">Pages 485-487</div>
+                        <a href="https://youtu.be/KWl10iv5twE" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chapter">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+                <h3>Chapter 10: Hypothesis Testing with Two Samples</h3>
+                <span class="chapter-toggle">+</span>
+            </div>
+            <div class="chapter-content">
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/-zerdk6Vn7Q" target="_blank">
+                            <img src="https://img.youtube.com/vi/-zerdk6Vn7Q/maxresdefault.jpg" alt="Two Population Means with Unknown Standard Deviations">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">10.1</div>
+                        <div class="section-title">Two Population Means with Unknown Standard Deviations</div>
+                        <div class="section-pages">Pages 514-521</div>
+                        <a href="https://youtu.be/-zerdk6Vn7Q" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/rMa9cqXVpxY" target="_blank">
+                            <img src="https://img.youtube.com/vi/rMa9cqXVpxY/maxresdefault.jpg" alt="Two Population Means with Known Standard Deviations">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">10.2</div>
+                        <div class="section-title">Two Population Means with Known Standard Deviations</div>
+                        <div class="section-pages">Pages 522-524</div>
+                        <a href="https://youtu.be/rMa9cqXVpxY" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/eyFj375cEaI" target="_blank">
+                            <img src="https://img.youtube.com/vi/eyFj375cEaI/maxresdefault.jpg" alt="Comparing Two Independent Population Proportions">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">10.3</div>
+                        <div class="section-title">Comparing Two Independent Population Proportions</div>
+                        <div class="section-pages">Pages 525-528</div>
+                        <a href="https://youtu.be/eyFj375cEaI" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/9RyPVQijHm0" target="_blank">
+                            <img src="https://img.youtube.com/vi/9RyPVQijHm0/maxresdefault.jpg" alt="Matched or Paired Samples">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">10.4</div>
+                        <div class="section-title">Matched or Paired Samples</div>
+                        <div class="section-pages">Pages 529-533</div>
+                        <a href="https://youtu.be/9RyPVQijHm0" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/lKl35BF-c1k" target="_blank">
+                            <img src="https://img.youtube.com/vi/lKl35BF-c1k/maxresdefault.jpg" alt="Hypothesis Testing for Two Means and Two Proportions">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">10.5</div>
+                        <div class="section-title">Hypothesis Testing for Two Means and Two Proportions</div>
+                        <div class="section-pages">Pages 534-537</div>
+                        <a href="https://youtu.be/lKl35BF-c1k" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chapter">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+                <h3>Chapter 11: The Chi-Square Distribution</h3>
+                <span class="chapter-toggle">+</span>
+            </div>
+            <div class="chapter-content">
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/v5ZOCwMhE00" target="_blank">
+                            <img src="https://img.youtube.com/vi/v5ZOCwMhE00/maxresdefault.jpg" alt="Facts About the Chi-Square Distribution">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">11.1</div>
+                        <div class="section-title">Facts About the Chi-Square Distribution</div>
+                        <div class="section-pages">Pages 566-566</div>
+                        <a href="https://youtu.be/v5ZOCwMhE00" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/2eBqdaOxwjI" target="_blank">
+                            <img src="https://img.youtube.com/vi/2eBqdaOxwjI/maxresdefault.jpg" alt="Goodness-of-Fit Test">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">11.2</div>
+                        <div class="section-title">Goodness-of-Fit Test</div>
+                        <div class="section-pages">Pages 567-575</div>
+                        <a href="https://youtu.be/2eBqdaOxwjI" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/K_4HB_O4vXk" target="_blank">
+                            <img src="https://img.youtube.com/vi/K_4HB_O4vXk/maxresdefault.jpg" alt="Test of Independence">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">11.3</div>
+                        <div class="section-title">Test of Independence</div>
+                        <div class="section-pages">Pages 576-580</div>
+                        <a href="https://youtu.be/K_4HB_O4vXk" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/7YTHV3o_z5Y" target="_blank">
+                            <img src="https://img.youtube.com/vi/7YTHV3o_z5Y/maxresdefault.jpg" alt="Test for Homogeneity">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">11.4</div>
+                        <div class="section-title">Test for Homogeneity</div>
+                        <div class="section-pages">Pages 581-583</div>
+                        <a href="https://youtu.be/7YTHV3o_z5Y" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/7rBamjr-N0g" target="_blank">
+                            <img src="https://img.youtube.com/vi/7rBamjr-N0g/maxresdefault.jpg" alt="Comparison of the Chi-Square Tests">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">11.5</div>
+                        <div class="section-title">Comparison of the Chi-Square Tests</div>
+                        <div class="section-pages">Pages 584-584</div>
+                        <a href="https://youtu.be/7rBamjr-N0g" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/YJ9x2zk_-u4" target="_blank">
+                            <img src="https://img.youtube.com/vi/YJ9x2zk_-u4/maxresdefault.jpg" alt="Test of a Single Variance">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">11.6</div>
+                        <div class="section-title">Test of a Single Variance</div>
+                        <div class="section-pages">Pages 584-585</div>
+                        <a href="https://youtu.be/YJ9x2zk_-u4" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/otMyriApWs8" target="_blank">
+                            <img src="https://img.youtube.com/vi/otMyriApWs8/maxresdefault.jpg" alt="Lab 1: Chi-Square Goodness-of-Fit">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">11.7</div>
+                        <div class="section-title">Lab 1: Chi-Square Goodness-of-Fit</div>
+                        <div class="section-pages">Pages 586-588</div>
+                        <a href="https://youtu.be/otMyriApWs8" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/6jruzLs0EF0" target="_blank">
+                            <img src="https://img.youtube.com/vi/6jruzLs0EF0/maxresdefault.jpg" alt="Lab 2: Chi-Square Test of Independence">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">11.8</div>
+                        <div class="section-title">Lab 2: Chi-Square Test of Independence</div>
+                        <div class="section-pages">Pages 589-590</div>
+                        <a href="https://youtu.be/6jruzLs0EF0" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chapter">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+                <h3>Chapter 12: Linear Regression and Correlation</h3>
+                <span class="chapter-toggle">+</span>
+            </div>
+            <div class="chapter-content">
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/XZXm77X_3Vk" target="_blank">
+                            <img src="https://img.youtube.com/vi/XZXm77X_3Vk/maxresdefault.jpg" alt="Linear Equations">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">12.1</div>
+                        <div class="section-title">Linear Equations</div>
+                        <div class="section-pages">Pages 619-621</div>
+                        <a href="https://youtu.be/XZXm77X_3Vk" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/Rq-dsU5Xrms" target="_blank">
+                            <img src="https://img.youtube.com/vi/Rq-dsU5Xrms/maxresdefault.jpg" alt="Scatter Plots">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">12.2</div>
+                        <div class="section-title">Scatter Plots</div>
+                        <div class="section-pages">Pages 622-624</div>
+                        <a href="https://youtu.be/Rq-dsU5Xrms" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/BeuEEVw8Gbg" target="_blank">
+                            <img src="https://img.youtube.com/vi/BeuEEVw8Gbg/maxresdefault.jpg" alt="The Regression Equation">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">12.3</div>
+                        <div class="section-title">The Regression Equation</div>
+                        <div class="section-pages">Pages 625-632</div>
+                        <a href="https://youtu.be/BeuEEVw8Gbg" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/GWAfKuc4V8Q" target="_blank">
+                            <img src="https://img.youtube.com/vi/GWAfKuc4V8Q/maxresdefault.jpg" alt="Testing the Significance of the Correlation Coefficient">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">12.4</div>
+                        <div class="section-title">Testing the Significance of the Correlation Coefficient</div>
+                        <div class="section-pages">Pages 633-636</div>
+                        <a href="https://youtu.be/GWAfKuc4V8Q" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/tTY--v_XMCM" target="_blank">
+                            <img src="https://img.youtube.com/vi/tTY--v_XMCM/maxresdefault.jpg" alt="Prediction">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">12.5</div>
+                        <div class="section-title">Prediction</div>
+                        <div class="section-pages">Pages 637-637</div>
+                        <a href="https://youtu.be/tTY--v_XMCM" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/cZAt8_t7hT4" target="_blank">
+                            <img src="https://img.youtube.com/vi/cZAt8_t7hT4/maxresdefault.jpg" alt="Outliers">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">12.6</div>
+                        <div class="section-title">Outliers</div>
+                        <div class="section-pages">Pages 638-645</div>
+                        <a href="https://youtu.be/cZAt8_t7hT4" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/iLKqD1wNU0s" target="_blank">
+                            <img src="https://img.youtube.com/vi/iLKqD1wNU0s/maxresdefault.jpg" alt="Regression (Distance from School)">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">12.7</div>
+                        <div class="section-title">Regression (Distance from School)</div>
+                        <div class="section-pages">Pages 646-647</div>
+                        <a href="https://youtu.be/iLKqD1wNU0s" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/zXDguyviZs4" target="_blank">
+                            <img src="https://img.youtube.com/vi/zXDguyviZs4/maxresdefault.jpg" alt="Regression (Textbook Cost)">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">12.8</div>
+                        <div class="section-title">Regression (Textbook Cost)</div>
+                        <div class="section-pages">Pages 648-648</div>
+                        <a href="https://youtu.be/zXDguyviZs4" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/wY3AmlN1HpQ" target="_blank">
+                            <img src="https://img.youtube.com/vi/wY3AmlN1HpQ/maxresdefault.jpg" alt="Regression (Fuel Efficiency)">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">12.9</div>
+                        <div class="section-title">Regression (Fuel Efficiency)</div>
+                        <div class="section-pages">Pages 649-651</div>
+                        <a href="https://youtu.be/wY3AmlN1HpQ" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chapter">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+                <h3>Chapter 13: F Distribution and One-Way ANOVA</h3>
+                <span class="chapter-toggle">+</span>
+            </div>
+            <div class="chapter-content">
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/q6uDz7yq1gI" target="_blank">
+                            <img src="https://img.youtube.com/vi/q6uDz7yq1gI/maxresdefault.jpg" alt="One-Way ANOVA">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">13.1</div>
+                        <div class="section-title">One-Way ANOVA</div>
+                        <div class="section-pages">Pages 681-681</div>
+                        <a href="https://youtu.be/q6uDz7yq1gI" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/dojDGs52Dk8" target="_blank">
+                            <img src="https://img.youtube.com/vi/dojDGs52Dk8/maxresdefault.jpg" alt="The F Distribution and the F-Ratio">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">13.2</div>
+                        <div class="section-title">The F Distribution and the F-Ratio</div>
+                        <div class="section-pages">Pages 682-685</div>
+                        <a href="https://youtu.be/dojDGs52Dk8" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/LROhFJrZL5I" target="_blank">
+                            <img src="https://img.youtube.com/vi/LROhFJrZL5I/maxresdefault.jpg" alt="Facts About the F Distribution">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">13.3</div>
+                        <div class="section-title">Facts About the F Distribution</div>
+                        <div class="section-pages">Pages 686-692</div>
+                        <a href="https://youtu.be/LROhFJrZL5I" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/RvLuspZZMig" target="_blank">
+                            <img src="https://img.youtube.com/vi/RvLuspZZMig/maxresdefault.jpg" alt="Test of Two Variances">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">13.4</div>
+                        <div class="section-title">Test of Two Variances</div>
+                        <div class="section-pages">Pages 693-694</div>
+                        <a href="https://youtu.be/RvLuspZZMig" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-thumbnail">
+                        <a href="https://youtu.be/Z-7U9myjrxo" target="_blank">
+                            <img src="https://img.youtube.com/vi/Z-7U9myjrxo/maxresdefault.jpg" alt="Lab: One-Way ANOVA">
+                        </a>
+                    </div>
+                    <div class="section-info">
+                        <div class="section-number">13.5</div>
+                        <div class="section-title">Lab: One-Way ANOVA</div>
+                        <div class="section-pages">Pages 695-696</div>
+                        <a href="https://youtu.be/Z-7U9myjrxo" target="_blank" class="section-link">Watch Video</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <div class="footer-content">
             <p>Curious2Study - Learn How to Learn</p>
@@ -220,5 +1634,15 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function toggleChapter(headerElement) {
+            const content = headerElement.nextElementSibling;
+            const toggle = headerElement.querySelector('.chapter-toggle');
+            
+            content.classList.toggle('active');
+            toggle.textContent = content.classList.contains('active') ? '−' : '+';
+        }
+    </script>
 </body>
 </html>
