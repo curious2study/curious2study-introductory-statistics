@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Study Statistics - Curious2Study</title>
+    <link rel="icon" type="image/png" href="https://curious2study.com/curious2study_small.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            color: #333;
+            background-color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: #f8fafc;
+            padding: 20px 0;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-section img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .header-logo-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .site-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1e3a8a;
+            text-decoration: none;
+        }
+
+        .back-link {
+            color: #1e3a8a;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #60a5fa;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            margin-bottom: 16px;
+        }
+
+        .hero p {
+            font-size: 18px;
+        }
+
+        /* Back to subject link, under hero */
+        .breadcrumb {
+            max-width: 900px;
+            margin: 20px auto 0;
+            padding: 0 20px;
+        }
+
+        .breadcrumb a {
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+        }
+
+        .breadcrumb a:hover {
+            color: #1e3a8a;
+        }
+
+        /* Article body */
+        .article {
+            padding: 30px 20px 60px;
+        }
+
+        .article h2 {
+            color: #1e3a8a;
+            font-size: 24px;
+            margin: 32px 0 14px;
+        }
+
+        .article h2:first-child {
+            margin-top: 0;
+        }
+
+        .article p {
+            font-size: 16px;
+            margin-bottom: 16px;
+        }
+
+        .article strong {
+            color: #1e3a8a;
+        }
+
+        .section-intro {
+            font-size: 15px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .tips-list {
+            list-style: none;
+            counter-reset: tip-counter;
+        }
+
+        .tips-list > li {
+            counter-increment: tip-counter;
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 18px 20px 18px 60px;
+            margin-bottom: 16px;
+            position: relative;
+        }
+
+        .tips-list > li::before {
+            content: counter(tip-counter);
+            position: absolute;
+            left: 18px;
+            top: 18px;
+            width: 28px;
+            height: 28px;
+            background-color: #3b82f6;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .tips-list > li h3 {
+            color: #1e3a8a;
+            font-size: 17px;
+            margin-bottom: 6px;
+        }
+
+        .tips-list > li > p {
+            font-size: 15px;
+            margin-bottom: 0;
+            color: #333;
+        }
+
+        /* Study Tools cards (no numbering, unlike tips) */
+        .tools-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .tool-card {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-left: 4px solid #3b82f6;
+            border-radius: 8px;
+            padding: 18px 20px;
+        }
+
+        .tool-card h3 {
+            color: #1e3a8a;
+            font-size: 17px;
+            margin-bottom: 6px;
+        }
+
+        .tool-card p {
+            font-size: 15px;
+            color: #333;
+            margin-bottom: 0;
+        }
+
+        .tool-card p + p {
+            margin-top: 10px;
+        }
+
+        .tool-link {
+            color: #3b82f6;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .tool-link:hover {
+            color: #1e3a8a;
+        }
+
+        .prompt-box {
+            background-color: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin: 14px 0 0;
+        }
+
+        .prompt-label {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
+
+        .prompt-box p.prompt-intro {
+            font-size: 15px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .prompt-steps {
+            margin: 0 0 0 20px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .prompt-steps li {
+            margin-bottom: 8px;
+        }
+
+        .source-note {
+            background-color: #eff6ff;
+            padding: 10px 14px;
+            border-left: 4px solid #3b82f6;
+            border-radius: 4px;
+            font-size: 13px;
+            color: #1e3a8a;
+            margin-top: 12px;
+        }
+
+        .source-note a {
+            color: #1e3a8a;
+            font-weight: 600;
+        }
+
+        .source-section {
+            background-color: #f8fafc;
+            border-radius: 8px;
+            padding: 20px 24px;
+            margin-top: 10px;
+        }
+
+        .source-section h2 {
+            margin-top: 0;
+        }
+
+        .source-section p {
+            font-size: 15px;
+        }
+
+        .source-section a {
+            color: #3b82f6;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .source-section a:hover {
+            color: #1e3a8a;
+        }
+
+        .back-to-top {
+            text-align: center;
+            padding: 20px 20px 0;
+        }
+
+        .back-to-top a {
+            display: inline-block;
+            padding: 10px 24px;
+            background-color: #3b82f6;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: background-color 0.2s ease;
+        }
+
+        .back-to-top a:hover {
+            background-color: #1e3a8a;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-content p {
+            margin-bottom: 10px;
+        }
+
+        .footer-links {
+            margin-top: 20px;
+        }
+
+        .footer-links a {
+            color: #60a5fa;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 26px;
+            }
+
+            .tips-list li {
+                padding: 16px 16px 16px 54px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="https://curious2study.com/curious2study_small.png" alt="Curious2Study Logo">
+                <div class="header-logo-text">
+                    <a href="https://curious2study.com" class="site-title">Curious2Study</a>
+                </div>
+            </div>
+            <a href="https://curious2study.com" class="back-link">← Back to Home</a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>How to Study Statistics</h1>
+            <p>Practical habits for visualizing data and reasoning about what it means.</p>
+        </div>
+    </section>
+
+    <div class="breadcrumb">
+        <a href="index.html">← Back to Statistics</a>
+    </div>
+
+    <!-- Article -->
+    <section class="container article">
+        <h2>How Do You Study Statistics?</h2>
+        <p>Statistics is cumulative more than most other subjects. A weak grasp of descriptive statistics doesn't just slow you down in probability, it makes probability hard to learn correctly at all, and the same chain continues into inference and applied tests. The other real shift in this subject is that computation isn't really the point. Software should be doing your arithmetic; your job is to visualize, interpret, and decide.</p>
+
+        <h2>Study Tips</h2>
+        <ol class="tips-list">
+            <li>
+                <h3>Visualize your data before you analyze it</h3>
+                <p>This is the single most important habit in this list. A plot often reveals what a summary statistic hides, a skewed distribution, an outlier, a pattern a mean and standard deviation alone would never show you. Get in the habit of looking at your data before you run any test on it, not after.</p>
+            </li>
+            <li>
+                <h3>Use statistical software for computation, and start using it early</h3>
+                <p>R, Python, SPSS, or Excel are the common choices, and a graphing calculator works as an offline option. Letting software handle the arithmetic frees you to focus on interpreting results instead of computing them by hand, and hands-on use builds real intuition faster than working through formulas on paper. One thing worth checking early in your course: some classes allow software for homework and projects but still expect you to compute things manually on exams. Find out which applies to you, and practice both if it does.</p>
+            </li>
+            <li>
+                <h3>Treat every new analysis as a review of everything that came before it</h3>
+                <p>Statistics builds continuously on earlier material, so running a new analysis with software is also a chance to reinforce the concepts from earlier in the course, not just practice the new one.</p>
+            </li>
+            <li>
+                <h3>Learn in order: descriptive statistics, then probability, then inference, then applied tests</h3>
+                <p>Start with mean, median, mode, and measures of spread like standard deviation and variance. Then move to probability basics: distributions, expected value, independent events. Then inferential statistics: confidence intervals, hypothesis testing, p-values, and the Central Limit Theorem. Then applied tests: knowing when to use a t-test, ANOVA, or chi-square test. Skipping ahead tends to backfire more here than in some other subjects, since each stage genuinely depends on a solid grasp of the one before it.</p>
+            </li>
+            <li>
+                <h3>Practice with real datasets, not just worked examples</h3>
+                <p>Reading about a technique and actually running it on real data are different skills, and the second one is what makes the theory stick. Active, hands-on problem-solving is consistently what students and practitioners point to as the thing that actually cements understanding.</p>
+            </li>
+            <li>
+                <h3>Once software handles the calculation, focus on interpretation</h3>
+                <p>Many statistics mistakes aren't arithmetic mistakes at all, they're choosing the wrong test for the situation, or misreading what a p-value or confidence interval actually claims. Ask yourself why a particular method fits your data and your question, not just how to run it.</p>
+            </li>
+            <li>
+                <h3>Read the material before lecture, not just after</h3>
+                <p>Getting a first pass at the concepts on your own, even an imperfect one, means lecture time reinforces something you've already half-learned instead of being your first exposure to it.</p>
+            </li>
+            <li>
+                <h3>Use AI as a tutor, not an answer key</h3>
+                <p>Statistics problems often start from a described situation or a chunk of software output, not a single equation, so the useful question usually isn't "solve this," it's "which method fits this situation, and what does this result actually mean." See the AI Chat entry in Study Tools below for a full example prompt.</p>
+            </li>
+        </ol>
+
+        <h2>Study Tools</h2>
+        <p class="section-intro">These tools map onto the habits above, each is suited to a different part of the routine, not a replacement for actually working through practice problems yourself.</p>
+        <div class="tools-list">
+            <div class="tool-card">
+                <h3>R / RStudio / Posit</h3>
+                <p>The standard tool for statistical computing in most courses. Posit (the company behind RStudio) also offers Posit Cloud, a browser-based version of RStudio that runs without any local installation, useful if you're on a school computer or just don't want to deal with setup. Learning to run and interpret basic commands early, even before you fully understand the theory behind them, gives you a hands-on frame of reference for the concepts as they're introduced.</p>
+                <p>If you've never used R before, a short tutorial can help you get comfortable with the basics before your course expects you to use it. One option: <a class="tool-link" href="https://www.youtube.com/watch?v=_V8eKsto3Ug" target="_blank">"R Programming Tutorial - Learn the Basics of Statistical Computing" →</a> This isn't required, your course may cover everything you need, but it's a reasonable head start if you'd rather not learn R for the first time in the middle of a statistics assignment.</p>
+            </div>
+
+            <div class="tool-card">
+                <h3>StatQuest (Josh Starmer)</h3>
+                <p><a class="tool-link" href="https://www.youtube.com/@statquest" target="_blank">youtube.com/@statquest →</a></p>
+                <p>A YouTube channel built around clear, visual explanations of statistical concepts and algorithms. Good for demystifying a method before or after you encounter it in your course.</p>
+            </div>
+
+            <div class="tool-card">
+                <h3>Cross Validated</h3>
+                <p><a class="tool-link" href="https://stats.stackexchange.com" target="_blank">stats.stackexchange.com →</a></p>
+                <p>The statistics-focused Stack Exchange community. A good place to search for how others have explained a concept or worked through a specific methodological question, since statistics questions often have more nuance than a single textbook definition captures.</p>
+            </div>
+
+            <div class="tool-card">
+                <h3>AI Chat (Claude, ChatGPT, Gemini)</h3>
+                <p>Good for reasoning through which method fits a situation and what a result actually means, rather than solving a single equation. Useful for checking your code too, describe what you were trying to do and paste the code or the error, and ask it to walk through where the logic breaks down instead of just handing you a fix.</p>
+                <div class="prompt-box">
+                    <div class="prompt-label">Example Prompt</div>
+                    <p class="prompt-intro">You are my statistics tutor. I'm describing a problem or pasting some software output below. Please don't just tell me the answer or fix my code right away. Instead:</p>
+                    <ol class="prompt-steps">
+                        <li>Restate the situation in your own words, including what question is actually being asked.</li>
+                        <li>Then stop. Give me a moment to think about which method or test applies before you tell me. Wait for me to say "next."</li>
+                        <li>When I say next, tell me which method applies, and explain why it fits this situation specifically, not just what the method is.</li>
+                        <li>When I say next again, walk through how to set it up, one step at a time. After each step, stop. If I ask a question about that step, answer it and wait for me to say "next" before continuing.</li>
+                        <li>If I show you my code or my result, tell me whether any mistake is in the method I chose, the way I set it up, or how I'm interpreting the output, and briefly explain why.</li>
+                        <li>Only give me the complete solution or corrected code if I explicitly ask for it.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="back-to-top">
+            <a href="index.html">← Back to Statistics</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>Curious2Study - Learn How to Learn</p>
+            <p>Licensed under Creative Commons Attribution 4.0 International License (CC BY 4.0)</p>
+            <div class="footer-links">
+                <a href="https://curious2study.com">Home</a>
+                <a href="https://github.com/Curious2Study">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
