@@ -92,6 +92,23 @@
             margin-bottom: 20px;
         }
 
+        .link-box {
+            display: block;
+            text-decoration: none;
+        }
+
+        .link-box .chapter-header {
+            border-bottom: none;
+        }
+
+        .link-box:hover .chapter-header {
+            background-color: #e0f2fe;
+        }
+
+        .link-box .chapter-toggle {
+            font-size: 22px;
+        }
+
         .resources {
             background-color: #f8fafc;
             padding: 40px 20px;
@@ -371,6 +388,16 @@
             <h1>Introductory Statistics 2e</h1>
             <p>From sampling and data to regression and ANOVA. Build a solid foundation in statistical thinking.</p>
         </div>
+    </section>
+
+    <!-- How to Study Statistics Link -->
+    <section class="container" style="padding: 40px 20px 0;">
+        <a class="chapter link-box" href="study-tips.html">
+            <div class="chapter-header">
+                <h3>How to Study Statistics</h3>
+                <span class="chapter-toggle">→</span>
+            </div>
+        </a>
     </section>
 
     <section class="container resources">
